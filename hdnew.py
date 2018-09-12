@@ -22,18 +22,18 @@ def main():
             datefmt='%Y-%m-%d %H:%M:%S'
         )
 
-    logger = logging.getLogger()
+    logger = logging.getLogger(__name__)
     logger.debug('Entering main')
 
     output_file = 'new.html'
 
-    num_pages_to_grab = 2
+    num_pages_to_grab = 8
     logger.debug(f'Grabbing {num_pages_to_grab} pages.')
 
     try:
         os.remove(output_file)
-    except OSError:
-        pass
+    except OSError as e:
+        print(f'output {output_file} file was not found {e}.... this should now continue.')
 
     utils.write_output('header.html')
 
@@ -45,6 +45,7 @@ def main():
 
     utils.write_output('footer.html')
 
+    print(f'New releases should be found in file {output_file}')
 
 if __name__ == '__main__':
     main()
