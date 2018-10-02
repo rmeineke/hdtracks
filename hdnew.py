@@ -27,7 +27,7 @@ def main():
 
     output_file = 'new.html'
 
-    num_pages_to_grab = 8
+    num_pages_to_grab = 20
     logger.debug(f'Grabbing {num_pages_to_grab} pages.')
 
     try:
