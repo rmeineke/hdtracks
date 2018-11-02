@@ -80,7 +80,7 @@ def get_artist_info_from_html(html):
             continue
         else:
             ret_str = ret_str + str(img) + '<p class="artist">' + artist_name + '</p>' + \
-                      '<p class="album">' + album_name + '</p>' + \
+                      '<p class="album"><a href="https://www.amazon.com/s/&field-keywords=' + artist_name + ' ' + album_name + '">' + album_name + '</a></p>' + \
                       '<p class="encoding">' + sample_string + '</p>' + \
                       '<hr />'
     db.close()

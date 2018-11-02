@@ -47,5 +47,6 @@ def main():
 
     print(f'New releases should be found in file {output_file}')
 
+
 if __name__ == '__main__':
     main()
