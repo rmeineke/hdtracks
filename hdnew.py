@@ -1,8 +1,9 @@
 import logging
-import sys
-from lib import utils
 import os
+import sys
 
+from lib import utils
+import webbrowser
 
 def main():
 
@@ -46,6 +47,7 @@ def main():
     utils.write_output('footer.html')
 
     print(f'New releases should be found in file {output_file}')
+    webbrowser.open('file://' + os.path.realpath(output_file))
 
 
 if __name__ == '__main__':
