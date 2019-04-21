@@ -79,8 +79,10 @@ def get_artist_info_from_html(html):
             # is merely CD quality
             continue
         else:
+            # 2019.02.21
+            # https://www.amazon.com/s?k=al+stewart+early + years
             ret_str = ret_str + str(img) + '<p class="artist">' + artist_name + '</p>' + \
-                      '<p class="album"><a href="https://www.amazon.com/s/&field-keywords=' + artist_name + ' ' + album_name + '">' + album_name + '</a></p>' + \
+                      '<p class="album"><a href="https://www.amazon.com/s?k=' + artist_name + ' ' + album_name + '">' + album_name + '</a></p>' + \
                       '<p class="encoding">' + sample_string + '</p>' + \
                       '<hr />'
     db.close()

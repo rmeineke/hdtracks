@@ -5,8 +5,8 @@ import sys
 from lib import utils
 import webbrowser
 
-def main():
 
+def main():
     # set up for logging
     LEVELS = {'debug': logging.DEBUG,
               'info': logging.INFO,
